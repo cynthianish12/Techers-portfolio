@@ -3,32 +3,30 @@ import Factor from "../components/Factor";
 
 export default function Factors() {
     return (
-        <div className="bg-[#ccc] py-[0.5rem] px-[8rem] ">
+        <div className="bg-gray-200 py-8 px-12">
             <div>
-                <h1 className="text-[blue] text-center text-[3rem] my-[4rem] ">Company Unique Factor</h1>
+                <h1 className="text-blue-600 text-center text-3xl my-8">Our Unique Factors</h1>
             </div>
-            <div className="flex space-x-[4rem] ">
+            <div className="flex justify-center space-x-8">
                 <Factor
-                    src="/785a1b9c359640da6bc9cfe3670b42ba.jpg"
-                    desc="unique factor 1"
+                    src="/factor.png"
+                    desc="Innovative Solutions"
                 />
                 <Factor
-                    src="/785a1b9c359640da6bc9cfe3670b42ba.jpg"
-                    desc="unique factor 1"
+                    src="/factor.png"
+                    desc="Customer-Centric Approach"
                 />
                 <Factor
-                    src="/785a1b9c359640da6bc9cfe3670b42ba.jpg"
-                    desc="unique factor 1"
+                    src="/factor.png"
+                    desc="Experienced Team"
                 />
                 <Factor
-                    src="/785a1b9c359640da6bc9cfe3670b42ba.jpg"
-                    desc="unique factor 1"
+                    src="/factor.png"
+                    desc="Quality Assurance"
                 />
-
-
-
+            </div>
+            <div className="mt-12">
             </div>
         </div>
-
-    )
+    );
 }
