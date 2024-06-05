@@ -1,5 +1,5 @@
-import Descr from "../components/Descr";
-import Factor from "../components/Factor";
+import Descr from "../../components/Descr";
+import Factor from "../../components/Factor";
 
 export default function Factors() {
     return (

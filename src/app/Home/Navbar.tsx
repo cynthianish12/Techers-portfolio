@@ -9,6 +9,7 @@ import image1 from "../../../public/Group 7.png";
 import Message from "./index";
 import { Heading } from "@chakra-ui/react";
 import { IoClose } from "react-icons/io5";
+import ContactForm from "./index";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -17,10 +18,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "HOME", linkto: "/" },
-    { name: "ABOUT US", linkto: "/about" },
-    { name: "PORTFOLIO", linkto: "/portfolio" },
-    { name: "SERVICES", linkto: "" },
-    { name: "BLOG", linkto: "/blog" },
+    { name: "ABOUT US", linkto: "/pages/about" },
+    { name: "SERVICES", linkto: "/pages/Services" },
     { name: "CONTACT US", onClick: () => setShowMessageModal(true) },
   ];
 
@@ -40,61 +39,62 @@ export default function Navbar() {
           {isVisible ? <IoMdClose /> : <TiThMenu />}
         </div>
       </div>
-
-      <nav className="">
-        <div
-          className={`fixed top-12 ${
-            isVisible ? "top-0" : "-top-full"
-          } md:hidden bg-slate-100 flex flex-col items-center justify-center w-full h-[90vh] transition-all duration-700  ease-in-out`}
+<nav className="">
+  <div
+    className={`fixed ${
+      isVisible ? "top-0" : "-top-full"
+    } bg-slate-100 flex flex-col z-50 items-center justify-center w-full h-auto max-h-[90vh] transition-all duration-700 ease-in-out md:hidden`}
+  >
+    {navLinks.map((link, i) => (
+      <div className="my-2" key={i}>
+        <a
+          href={link.linkto} // Add href attribute here
+          onClick={() => {
+            handleClick();
+            link.onClick && link.onClick();
+          }}
+          className={clsx(
+            "text-[14px] hover:text-skyBlue   duration-300",
+            {
+              "text-skyBlue": pathname === link.linkto,
+            },
+            "contact-link"
+          )}
         >
-          {navLinks.map((link, i) => (
-            <div className="my-2" key={i}>
-              <a
-                onClick={() => {
-                  handleClick();
-                  link.onClick && link.onClick();
-                }}
-                className={clsx(
-                  "text-[14px] hover:text-skyBlue duration-300",
-                  {
-                    "text-skyBlue": pathname === link.linkto,
-                  }
-                )}
-              >
-                {link.name}
-              </a>
-            </div>
-          ))}
-          <button
-            className="text-[14px] text-white bg-skyBlue px-4 py-2 rounded hover:bg-skyBlue-darkened duration-500"
-          >
-            GET QUOTE
-          </button>
-        </div>
-      </nav>
+          {link.name}
+        </a>
+      </div>
+    ))}
+  </div>
+</nav>
 
-      <nav className="hidden md:flex items-center justify-center gap-5 my-6 font-semibold w-full">
-        {navLinks.map((link, i) => (
-          <div className="my-2" key={i}>
-            <a
-              onClick={() => {
-                link.onClick && link.onClick();
-              }}
-              className={clsx(
-                "text-[14px] hover:text-skyBlue duration-300",
-                {
-                  "text-skyBlue": pathname === link.linkto,
-                }
-              )}
-            >
-              {link.name}
-            </a>
-          </div>
-        ))}
-        <button className="text-[14px] text-white bg-skyBlue px-4 py-2 rounded-[20px] hover:bg-skyBlue-darkened duration-500">
-          GET QUOTE
-        </button>
-      </nav>
+<nav className="hidden md:flex items-center justify-center gap-5 my-6 font-semibold w-full">
+  {navLinks.map((link, i) => (
+    <div className="my-2" key={i}>
+      <a
+        href={link.linkto} // Add href attribute here
+        onClick={() => {
+          link.onClick && link.onClick();
+        }}
+        className={clsx(
+          "text-[14px] hover:text-skyBlue cursor-pointer duration-300",
+          {
+            "text-skyBlue": pathname === link.linkto,
+          }
+        )}
+      >
+        {link.name}
+      </a>
+    </div>
+  ))}
+  <button className="text-[14px] text-white bg-skyBlue px-4 py-2 rounded-[20px] hover:bg-skyBlue-darkened duration-500">
+    <a href="https://x.com/TechersInc">
+    Connect
+    </a>
+  </button>
+</nav>
+
+    
       {showMessageModal && (
   <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
     <div className="absolute inset-0 bg-black opacity-50">
@@ -191,10 +191,12 @@ export default function Navbar() {
         <circle cx="100" cy="100" r="25" fill="skyblue" strokeWidth="10" />
       </svg>
 
-      <div className="flex justify-center items-center mb-8">
-      <Heading style={{ fontSize: "2.5rem", color: "skyblue", fontStyle: "italic" }}>Contact Us</Heading>
+      <div className="flex justify-center items-center mb-8 ">
+      <Heading style={{ fontSize: "2.5rem", color: "skyblue", fontStyle: "italic" }} cursor={"pointer"}>Contact Us</Heading>
       </div>
-      <Message onClose={closeModal} />
+      <ContactForm />
+      {/* <Message onClose={closeModal} /> */}  
+
     </div>
   </div>
 )}

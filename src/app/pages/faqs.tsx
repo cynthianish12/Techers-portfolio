@@ -24,7 +24,7 @@ const Userfaqs = () => {
           >
             <div className="flex justify-between items-center">
               <h4 className="text-[16px] font-bold text-skyBlue  pl-20">
-                Why did you choose design
+                What is our background
               </h4>
               <button
                 onClick={toggleExpand}
@@ -35,8 +35,8 @@ const Userfaqs = () => {
             </div>
             {isExpanded && (
               <p className="text-center text-[14px] pt-5">
-                we are an automated agency driven for working with you and
-                providing you with the best products
+               we are students from Rwanda Coding academy who work 
+               on software programming.
               </p>
             )}
           </div>
@@ -47,7 +47,7 @@ const Userfaqs = () => {
           >
             <div className="flex justify-between items-center">
               <h4 className="text-[16px] font-bold text-skyBlue  pl-20">
-                Why did you choose design
+                What to expect from us
               </h4>
               <button
                 onClick={toggleExpand}
@@ -58,8 +58,7 @@ const Userfaqs = () => {
             </div>
             {isExpanded && (
               <p className="text-center text-[14px] pt-5">
-                we are an automated agency driven for working with you and
-                providing you with the best products
+                we provide different services such as design, web development, branding and digital markenting.
               </p>
             )}
           </div>
@@ -70,7 +69,7 @@ const Userfaqs = () => {
           >
             <div className="flex justify-between items-center">
               <h4 className="text-[16px] font-bold text-skyBlue  pl-20">
-                Why did you choose design
+                Where to find us.
               </h4>
               <button
                 onClick={toggleExpand}
@@ -81,8 +80,8 @@ const Userfaqs = () => {
             </div>
             {isExpanded && (
               <p className="text-center text-[14px] pt-5">
-                we are an automated agency driven for working with you and
-                providing you with the best products
+               You can reach out to us through our social media account like X(Twitter) which is Techers Inc or even call us on 
+               our mobile phone which is +250793626143.
               </p>
             )}
           </div>
@@ -93,7 +92,7 @@ const Userfaqs = () => {
           >
             <div className="flex justify-between items-center">
               <h4 className="text-[16px] font-bold text-skyBlue  pl-20">
-                Why did you choose design
+              Wha is our main Goal
               </h4>
               <button
                 onClick={toggleExpand}
@@ -104,8 +103,8 @@ const Userfaqs = () => {
             </div>
             {isExpanded && (
               <p className="text-center text-[14px] pt-5">
-                we are an automated agency driven for working with you and
-                providing you with the best products
+                Our main goal is to use the knowlegde that we gain from our education in 
+                solving problems faced by our communities.
               </p>
             )}
           </div>

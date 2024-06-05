@@ -1,4 +1,4 @@
-import Member from "../components/Member";
+import Member from "../../components/Member";
 
 export default function Team() {
     return (
@@ -11,7 +11,7 @@ export default function Team() {
             </div>
             <div className="flex justify-center mx-[5rem] space-x-[8rem]">
                 <Member
-                    src={"/785a1b9c359640da6bc9cfe3670b42ba.jpg"}
+                    src={"/placeholder.jpeg"}
                     name="Asimwe Landry"
                     role="Senior Front-end Developer"
                 />
@@ -21,17 +21,17 @@ export default function Team() {
                     role="Senior Back-end Developer"
                 />
                 <Member
-                    src={"/785a1b9c359640da6bc9cfe3670b42ba.jpg"}
-                    name="Cynthia Marie"
+                    src={"/cynthia.jpg"}
+                    name="Nishimwe Cynthia Marie"
                     role="Project Manager"
                 />
                 <Member
-                    src={"/785a1b9c359640da6bc9cfe3670b42ba.jpg"}
+                    src={"/IMG-20240404-WA0018.jpg"}
                     name="Dios Muneza"
                     role="UX/UI Designer"
                 />
                 <Member
-                    src={"/785a1b9c359640da6bc9cfe3670b42ba.jpg"}
+                    src={"/picture.jpg"}
                     name="Aine Dushimire"
                     role="Front-End Dev"
                 />

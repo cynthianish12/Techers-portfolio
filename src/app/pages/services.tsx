@@ -12,26 +12,27 @@ export default function OurServices() {
     <main className="">
       <div className="">
         <div className="sm:mx-[50rem] flex flex-col items-center ">
-        <h1 className="text-skyBlue font-bold text-[20px] sm:text-[2rem] whitespace-nowrap">
+          <h1 className="text-skyBlue font-bold text-[20px] sm:text-[2rem] whitespace-nowrap ml-0 sm:ml-5">
             OUR SERVICES
           </h1>
+
           <div className="flex justify-center">
-          <h3 className="pt-[1rem] text-[1.5rem] font-bold sm:text-black-300 whitespace-nowrap">
-            We Are Specialized In The Following Services
-          </h3>
-        </div>
+            <h3 className="pt-[1rem] text-[1.5rem] font-bold sm:text-black-300 whitespace-nowrap">
+              We Are Specialized In The Following Services
+            </h3>
+          </div>
         </div>
 
         <div>
           <ul className="flex gap-[3rem] mx-[10rem] pt-[5rem] mt-3rem">
             <li className="bg-skyBlue h-[13rem] w-[13rem] px-[3rem] py-[4rem] justify-center font-medium text-white text-center h-[10rem] w-[11rem] hover:bg-skyBlue hover:text-white shadow-md">
-              Business Website
+              Frontend Development
             </li>
             <li className="px-[3rem] h-[13rem] w-[13rem] py-[3rem] justify-center font-medium text-black text-center w-[11rem] h-[10rem] hover:bg-skyBlue  hover:text-white shadow-md hover:transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-              e-Commerce Website
+              Web Design
             </li>
             <li className="px-[3rem] h-[13rem] w-[13rem] py-[3rem] justify-center font-medium text-black text-center w-[11rem] h-[10rem] hover:bg-skyBlue hover:text-white shadow-md hover:transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-              SEO
+              Backend Development
             </li>
             <li className="px-[3rem] h-[13rem] w-[13rem] py-[3rem] justify-center font-medium text-black text-center w-[11rem] h-[10rem] hover:bg-skyBlue  hover:text-white shadow-md hover:transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               Digital Marketing

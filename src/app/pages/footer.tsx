@@ -22,17 +22,15 @@ const Userfooter = () => {
                 </li>
                 <li className='mx-10'>
                     <ol>
-                        <li>+250 788888888</li>
-                        <li>techer@gmail.com</li>
+                        <li>+250793626143</li>
+                        <li>techerscorp@gmail.com</li>
                         <li>Kigali ,rwanda</li>
                     </ol>
                 </li>
                 <li className='mx-60'>
                     <ol>
-                        <li>Monday</li>
-                        <li>8:00-9:00</li>
-                        <li>Monday</li>
-                        <li>8:00-9:00</li>
+                        <li>24hr</li>
+                        <li>Seven Days per Week</li>
                     </ol>
                 </li>
                 <li className='mx-[4.5rem] '>
@@ -45,11 +43,10 @@ const Userfooter = () => {
             <ul className='flex gap-60 pt-11'>
                 <li className='font-medium text-[11px]'>Web  & App Development
                 <ol className='text-[8px] pt-6'>
-                    <li>Mobile app development</li>
-                    <li>Business website</li>
-                    <li> E-commerce website</li>
-                    <li>Online commerce</li>
-                    <li>Web mantianance</li>
+                    <li>Design</li>
+                    <li>Frontend Development</li>
+                    <li>Backend Development</li>
+                    <li>Mobile App Development</li>
                 </ol>
                 </li>
                 <li className='font-medium text-[11px]'>Seo Services
