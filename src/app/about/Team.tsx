@@ -16,7 +16,7 @@ export default function Team() {
                     role="Senior Front-end Developer"
                 />
                 <Member
-                    src={"/785a1b9c359640da6bc9cfe3670b42ba.jpg"}
+                    src={"/aimable.jpg"}
                     name="Aimable Kwizera"
                     role="Senior Back-end Developer"
                 />

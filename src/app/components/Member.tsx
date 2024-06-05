@@ -11,7 +11,7 @@ export default function Member({ src, name, role }) {
             alt=" member description "
             />
             <h2 className="text-[1.25rem]" >{ name }</h2>
-            <p className="text-[1rem] " >{ role }</p>
+            <p className="text-[1rem] text-gray-700 " >{ role }</p>
         </div>
     )
 }
