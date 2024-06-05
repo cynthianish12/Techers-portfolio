@@ -1,30 +1,26 @@
-import Image from "next/image"
+import React from 'react';
+import Image from 'next/image';
 
-export default function Pic() {
-    return (
-        <div>
-            {/* <Image
-            className=""
-                src={'/arror.svg'}
-                alt="arrow"
-                layout="fill"
-                objectFit="cover"
-            /> */}
-            <Image
-                src={"/pic.png"}
-                alt={"Company Image"}
-                layout="fill"
-                objectFit="cover"
-            />
-{/* 
-            <Image
-            className="rotate-180"
-                src={'/arror.svg'}
-                alt="arrow"
-                layout="fill"
-                objectFit="cover"
-            /> */}
+const MyComponent: React.FC = () => {
+  return (
+    <>
+    <div className="container rotate-45 relative top-[8rem] left-[20rem] w-500 h-400 bg-transparent">
+          <Image
+              className="decor absolute left-negative-125 top-125 w-[20rem] z-negative-1 transform rotate-180"
+              width="200"
+              height="400"
+              alt=''
+              src="/arror.svg" />
 
-        </div>
-    )
-}
+      <Image
+                  className="decor2 absolute left-425 bottom-125 w-[20rem] z-negative-1"
+                  width="200"
+                  height="400"
+                  src="/arror.svg" alt={''}      />
+
+    </div>
+    </>
+  )
+};
+
+export default MyComponent;
