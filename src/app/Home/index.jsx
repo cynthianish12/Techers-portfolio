@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import {
   Button,
   Container,
@@ -9,10 +8,9 @@ import {
   Textarea,
   useToast,
 } from "@chakra-ui/react";
-import emailJs from "@emailjs/browser";
-
-
+import emailJs from "@emailjs/browser"
 const ContactForm = () => {
+  const toast = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,45 +18,40 @@ const ContactForm = () => {
     message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const handleEmailSending = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      to_email: "techerscorp@gmail.com",
-      subject: formData.subject,
-      message: formData.message,
-    };
-
-    emailJs
-      .send("service_467ghe9", "template_vlwu3c6", templateParams, {
-        publicKey: "5K2Yas8x6npjaVTe1",
-      })
-      .then(() => {
-        setShowSuccessMessage(true);
-        setIsLoading(false);
-        // Reset form data
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        setIsLoading(false);
-        setShowSuccessMessage(false);
-      });
-  };
+const handleEmailSending = (e)=>{
+  e.preventDefault();
+  setIsLoading(true);
+const templateParams = {
+  from_name : formData.name,
+  from_email : formData.email,
+  to_email:"techerscorp@gmail.com",
+  subject : formData.subject,
+  message: formData.message,
+}
+emailJs.send("service_467ghe9", "template_vlwu3c6", templateParams,{publicKey:"5K2Yas8x6npjaVTe1"}).then(()=>{
+  toast({
+    title:"Message sent successfully",
+    status:"success",
+    duration:3000,
+    position:"top-right",
+    isClosable:true
+  })
+  setIsLoading(false)
+}).catch(err=>{
+  console.log(err);
+  toast({
+    title:"Failed to send message",
+    status:"error",
+    duration:3000,
+    position:"top-right",
+    isClosable:true
+  })
+  setIsLoading(false)
+})
+}
   return (
     <Container maxW="lg" mt={12} className="">
       <form onSubmit={handleEmailSending} method="post">
@@ -75,7 +68,6 @@ const ContactForm = () => {
             borderRadius="10px"
           />
         </FormControl>
-
         <FormControl isRequired mb={5}>
           <FormLabel>Email</FormLabel>
           <Input
@@ -90,7 +82,6 @@ const ContactForm = () => {
             borderRadius="10px"
           />
         </FormControl>
-
         <FormControl isRequired mb={5}>
           <FormLabel>Subject</FormLabel>
           <Input
@@ -104,7 +95,6 @@ const ContactForm = () => {
             borderRadius="10px"
           />
         </FormControl>
-
         <FormControl isRequired mb={5}>
           <FormLabel>Message</FormLabel>
           <Textarea
@@ -131,23 +121,11 @@ const ContactForm = () => {
           borderWidth="1px"
           borderColor="wheat"
           borderRadius="10px"
-  
         >
           Submit
         </Button>
-        {showSuccessMessage && (
-          <Box mt={4} color="green.500">
-            <p>Message sent successfully!</p>
-          </Box>
-        )}
-        {showErrorMessage && (
-          <Box mt={4} color="red.500">
-            <p>Message not sent. Please try again later.</p>
-          </Box>
-        )}
       </form>
     </Container>
   );
 };
-
 export default ContactForm;

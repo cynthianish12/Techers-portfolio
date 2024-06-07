@@ -69,6 +69,8 @@ const ParticleComponent = () => {
                 data-max-width="100%"
                 data-max-height="100%"
                 src="/Group 7.png"
+                width={550}
+                height={320}
                 alt=''
                 onLoad={handleImageLoad}
             />

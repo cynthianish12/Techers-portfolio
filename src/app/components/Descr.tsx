@@ -10,7 +10,7 @@ export default function Descr() {
                 <></>
                 <p>Our approach is centered on collaboration, transparency, and continuous improvement. We work closely with our clients to understand their goals and objectives, leveraging our technical expertise and industry insights to deliver solutions that align with their strategic vision. Whether you&apos;re a startup looking to launch a new product or an established enterprise seeking to modernize your systems, we&apos;re here to help you succeed. At Techers Corp, we&apos;re not just building software – we&apos;re building partnerships that last.</p>
             </div>
-            <div className="relative h-[30rem] w-[35rem]">
+            <div className="relative h-[30rem] w-[30rem]">
                 <Pic />
             </div>
         </div>
