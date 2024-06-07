@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 import { useEffect } from 'react';
 
 const ParticleComponent = () => {
@@ -59,7 +60,7 @@ const ParticleComponent = () => {
 
     return (
         <>
-            <img
+            <Image
                 id="logo"
                 className="next-particle"
                 data-particle-gap="1"
@@ -68,6 +69,7 @@ const ParticleComponent = () => {
                 data-max-width="100%"
                 data-max-height="100%"
                 src="/Group 7.png"
+                alt=''
                 onLoad={handleImageLoad}
             />
         </>

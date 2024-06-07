@@ -66,8 +66,8 @@ const Usercustomers = () => {
                 Excellent in their work and happy and motivated to work with them and also they offer the best services that i have ever seen in <br /> all of the
                 companies that i have worked with different things
               </p>
-              <p className="text-left text-skyBlue  text-[13px] px-6 pt-8">David Ikene</p>
-              <p className="text-left text-[10px] px-6 pt-1">Master card foundation</p>
+              <p className="text-left text-skyBlue  text-[13px] px-6 pt-8">Jaime Calvary</p>
+              <p className="text-left text-[10px] px-6 pt-1">Motion Recruitment Partners LLC</p>
 
             </div>
 

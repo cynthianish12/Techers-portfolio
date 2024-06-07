@@ -20,14 +20,14 @@ const Services = () => {
     },
     {
       title: "Frontend Development",
-      desc: "We do Frontend development for different app",
+      desc: "We make stanning Frontend development for different app",
       pDesc: "Read more",
       icon1: <FaCircleArrowRight />,
       icon2: <TfiWrite />,
     },
     {
       title: " Backend Development",
-      desc: "We also do backend of different projects ",
+      desc: "Backend developement of different projects and apps we do ",
       pDesc: "Read more",
       icon1: <FaLongArrowAltRight />,
       icon2: <TfiWrite />,

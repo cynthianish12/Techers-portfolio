@@ -10,7 +10,7 @@ const projects = [
   {
     href: "https://aphezis.com",
     imgSrc: "/persond.png",
-    title: "Pearsond",
+    title: "Pearsand",
     description: "this is a VPN app that is fast and cheap. It is great in providing internet and it is very cheap",
   },
   {
@@ -65,14 +65,14 @@ export default function ProjectPage() {
             </button>
           </ul>
         </div>
-        <div className="flex gap-8 mx-[10rem] -my-[55rem] list-none">
+        <div className="flex space-x-[5rem] gap-8 mx-[10rem] -my-[55rem] list-none">
           {projects.slice(0, 3).map((project, index) => (
             <Link
               key={index}
               href={project.href}
               className="bg-white w-[20rem] h-[20rem] rounded-md shadow-2xl text-center relative overflow-hidden group"
             >
-              <div className="transition-opacity duration-500 group-hover:opacity-0">
+              <div className="transition-opacity px-[1rem] duration-500 group-hover:opacity-0">
                 <Image
                   className="w-56 h-56 mx-auto"
                   src={project.imgSrc}
@@ -93,14 +93,14 @@ export default function ProjectPage() {
             </Link>
           ))}
         </div>
-        <div className="flex gap-8 mx-[10rem] my-[60rem] list-none">
+        <div className="flex space-x-[4rem] gap-8 mx-[10rem] my-[60rem] list-none">
           {projects.slice(3).map((project, index) => (
             <Link
               key={index + 3}
               href={project.href}
               className="bg-white w-[20rem] h-[20rem] rounded-md shadow-2xl text-center relative overflow-hidden group"
             >
-              <div className="transition-opacity duration-500 group-hover:opacity-0">
+              <div className="transition-opacity  px-[1rem] duration-500 group-hover:opacity-0">
                 <Image
                   className="w-56 h-56 mx-auto"
                   src={project.imgSrc}

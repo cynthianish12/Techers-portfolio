@@ -13,7 +13,7 @@ export default function Landon() {
         <div className="my-6">
           <p>Techers</p>
           <h1 className="text-skyBlue text-3xl font-bold my-5 md:text-4xl">
-            We're Creative Digital Agency
+            We&apos; re Creative Digital Agency
           </h1>
 
           <p className="text-gray-500">

@@ -12,12 +12,13 @@ const Userfooter = () => {
                 <li className='-ml-10'>Policy</li>
             </ul>
           <div className=' text-white  mx-[5rem] text-[10px] pt-10 font-medium'>
-            <ul className='flex gap-8'>
+            <ul className='flex gap-8 '>
                 <li>
-                <p>We are creative agency that offers digital solutions to business that want to<br/> impact
-                to the digital age,build awareness of their business  and their products<br/> and increase the 
-                income and profits of the business, we are specialised in web<br/> design ,mobile development,seo,
-                digital marketing and branding
+                <p>We are creative agency that offers digital solutions to business<br />
+                that want to impact to the digital age,build awareness of their<br />
+                business  and their products and increase the income<br />
+                and profits of the business, we are specialised in web design, <br />
+                mobile development,seo,digital marketing and branding
             </p>
                 </li>
                 <li className='mx-10'>
@@ -27,13 +28,13 @@ const Userfooter = () => {
                         <li>Kigali ,rwanda</li>
                     </ol>
                 </li>
-                <li className='mx-60'>
+                <li className='mx-[12.5rem]'>
                     <ol>
                         <li>24hr</li>
                         <li>Seven Days per Week</li>
                     </ol>
                 </li>
-                <li className='mx-[4.5rem] '>
+                <li className='mx-[3rem] '>
                     <ol>
                         <li>Terms and conditions</li>
                         <li>Policy</li>
